@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/**{
+    background-color: #000;
+    color: #fff;
+    outline:1px solid #f00;
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFCC;
+    font-family: "微软雅黑";
+}
+
+#content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    margin: 10px auto;
+}
+
+.img {
+    border: 0.7em solid #99CC99;
+}
+
+#button {
+    background: transparent url(imgs/double.png);
+    border-style: none;
+    border-radius: 10px;
+    margin: 20px 15px 15px;
+    width: 211px;
+    height: 45px;
+}
+
+#button2 {
+    background: transparent url(imgs/one.png);
+    border-style: none;
+    border-radius: 10px;
+    margin: 20px 15px 15px;
+    width: 110px;
+    height: 39px;
+}
+
+#content p {
+    color: #3e543e;
+}
+
+#footer {
+    text-align: center;
+    color: #3e543e;
+}
+
+#footer a {
+    color: #3e543e;
+}
+
+@media only screen and (max-width:500px) {
+    .logo img {
+        width: 100%;
+        height: auto;
+        margin:auto;
+    }
+    .img {
+        max-width: 490px;
+        width: 90%;
+        height: auto;
+        border: 0.7em solid #99CC99;
+    }
+}

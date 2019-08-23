@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+    color: #0d4752;
+}
+a {
+    text-decoration: none;
+    color: #22BAD9;
+}
+pre {
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(219, 219, 219);
+}
+
+#main {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 展示博客页面 */
+.showBlogs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+}
+.showBlogs h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF8E23;
+}
+.showBlogs .search {
+    height: 30px;
+    border: 2px solid #22BAD9;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.showBlogs article {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.showBlogs article h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+}
+.showBlogs article p {
+    margin: 5px auto 5px;
+}
+
+/* 博客详情页面 */
+.this-blog {
+    max-width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.this-blog h2 {
+    font-size: 1.8rem;
+}
+.modify {
+    text-align: center;
+}
+.modify button {
+    outline: none;
+    width: 70px;
+    height: 40px;
+    background-color: #FF8E23;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto 20px;
+}
+.modify a {
+    color: #fff;
+}
+.markedHtml {
+    display: flex;
+    flex-direction: column;
+}
+/* 添加博客页面 */
+.addBlog, .modify-blog {
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch    ;
+}
+.addBlog .editor, .modify-blog .editor{
+    padding: 0 10px;
+    flex: 1;
+}
+.addBlog h2, .modify-blog h2{
+    width: 100%;
+    font-size: 1.8rem;
+    color: #FF8E23;
+}
+
+.addBlog .editor .checkDiv, .modify-blog .editor .checkDiv {
+    display: inline-block;
+}
+.addBlog .editor button, .modify-blog .editor button {
+    outline: none;
+    width: 70px;
+    height: 40px;
+    background-color: #FF8E23;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.addBlog .editor input[type=text], textarea {
+    width: 100%;
+    margin: 10px auto;
+    height: 30px;
+    border: 1px solid #22BAD9;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.modify-blog .editor input[type=text], textarea {
+    width: 100%;
+    margin: 10px auto;
+    height: 30px;
+    border: 1px solid #22BAD9;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.addBlog .editor textarea, .modify-blog .editor textarea {
+    min-width: 500px;
+    height: 400px;
+    font-size: 1.2rem;
+}
+.checkDiv {
+    margin-left: 10px;
+}
+.addBlog .editor select, .modify-blog .editor select {
+    margin: 10px auto;
+    width: 100%;
+    border: 1px solid #22BAD9;
+    height: 30px;
+    outline: none;
+    border-radius: none;
+}
+.view {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border: 1px solid #22BAD9;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* 响应式 屏幕小于700px*/
+@media screen and (max-device-width: 700px) {
+    /* * {
+        outline: 1px solid red;
+    } */
+    html {
+        font-size: 20px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .index .index-img {
+        width: 50vw;
+    }
+    #singleBlog h2 {
+        font-size: 1rem;
+    }
+    #singleBlog p {
+        display: none;
+    }
+    .addBlog {
+        max-width: 90vw;
+    }
+    .addBlog .editor textarea, .modify-blog .editor textarea{
+        min-width: 1px;
+        width: 100%;
+        height: 400px;
+        font-size: 1.2rem;
+    }
+    .modify-blog {
+        max-width: 90vw;
+    }
+    .addBlog .editor button, .modify-blog .editor button {
+        width: 100%;
+    }
+    .this-blog {
+        max-width: 90vw;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .markedHtml {
+        max-width: 90vw;
+        text-overflow: ellipsis;
+    }
+    .modify button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

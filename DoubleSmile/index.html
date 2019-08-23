@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="../jquery-3.1.1.js"></script>
+    <title> Double Smile </title>
+</head>
+
+<body>
+    <div id="content">
+        <div>
+            <div class="logo">
+                <img src="imgs/05.png" alt="logo">
+            </div>
+            <img id="img1" class="img" src="imgs/1.gif" alt="图片">
+            <img id="img2" class="img" style="display: none;" src="imgs/2.gif" alt="图片">
+            <br>
+            <div id="buttonbox">
+                <button id="button" type=""></button>
+                <button id="button2" type="" style="display: none;"></button>
+                </div>
+
+        </div>
+        <p>因为服务器在国外，所以加载速度比较慢，请见谅~</p>
+        <p>每天更新两个笑容gif，素材来自网络</p>
+    </div>
+    <footer id="footer">
+        <p>如果你想给我发素材，请<a id="lianxi" href="###">点这里</a></p>
+        <img id="q" src="imgs/q二维码.png" style="display: none;" alt="二维码">
+    </footer>
+    <script>
+        $("#button").click(function () {
+            $("#img2").show();
+            $("#button").hide();
+            $("#button2").show();
+        });   
+         $("#button2").click(function () {
+            $("#img2").hide();
+            $("#button").show();
+            $("#button2").hide();
+        });  
+        $("#lianxi").click(function(){
+            $("#q").slideToggle();
+        });
+    </script>
+</body>
+
+</html>
